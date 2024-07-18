@@ -24,5 +24,5 @@ router.register(r'pokemon', views.PokemonView, 'pokemon')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)), #api route for pokemon we will be eventually able to add and get
+    path('api/', include(router.urls)), #api route for server
 ]
