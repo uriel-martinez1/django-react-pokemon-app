@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path , include
 from rest_framework import routers
 from pokemon import views
+from django.conf import settings # new for ec2 instance
+from  django.conf.urls.static import static # new foe ec2 instance
 
 router = routers.DefaultRouter()
 router.register(r'pokemon', views.PokemonView, 'pokemon')
@@ -26,3 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)), #api route for server
 ]
+
+# Used to help run static in our EC2 instance
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_URL)
