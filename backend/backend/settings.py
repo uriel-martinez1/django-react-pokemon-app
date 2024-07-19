@@ -137,3 +137,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
 ]
+
+# Added to help run collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
