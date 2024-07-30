@@ -136,7 +136,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Added this so it whitelisted the url so its the line of communication between the backend and the frontend
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://975050133860-pokemon-app.s3-website.us-east-1.amazonaws.com'
 ]
 
 # Added to help run collectstatic
