@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
-const baseUrl = 'https://pokeapi.co/api/v2/pokemon';
+const baseUrl = 'https://pokeapi.co/api/v2/pokemon'; //poke api endpoint
+const API_BASE_URL = 'http://ec2-54-163-133-56.compute-1.amazonaws.com'; // ec2 server endpoint
 
 export default class PokemonDetail extends React.Component {
     state = {
@@ -45,7 +46,7 @@ export default class PokemonDetail extends React.Component {
 
     // method to save Pokemon to the favorite list 
     saveToFavoriteList = () => {
-        axios.post('/api/pokemon/', this.state.pokemonDetail)
+        axios.post(`${API_BASE_URL}/api/pokemon/`, this.state.pokemonDetail)
         .then((response) => {
             alert('Pokemon was saved to favorites!')
         })
