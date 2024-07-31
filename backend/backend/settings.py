@@ -140,5 +140,14 @@ CORS_ORIGIN_WHITELIST = [
     'http://975050133860-pokemon-app.s3-website.us-east-1.amazonaws.com'
 ]
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    'http://975050133860-pokemon-app.s3-website.us-east-1.amazonaws.com',
+    'http://ec2-54-163-133-56.compute-1.amazonaws.com'
+]
+
+# Allow credentials
+CORS_ALLOW_CREDENTIALS = True
+
 # Added to help run collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
