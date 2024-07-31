@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 const baseUrl = 'https://pokeapi.co/api/v2/pokemon'; //poke api endpoint
-const API_BASE_URL = 'http://ec2-54-163-133-56.compute-1.amazonaws.com:8000'; // ec2 server endpoint, needs to include port 8000
+const API_BASE_URL = 'http://ec2-54-163-133-56.compute-1.amazonaws.com:8080'; // ec2 server endpoint, needs to include port 8000
 
 export default class PokemonDetail extends React.Component {
     state = {
