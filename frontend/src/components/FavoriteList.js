@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://ec2-54-163-133-56.compute-1.amazonaws.com:8080'; // ec2 server endpoint, needs to include port 8000
+const API_BASE_URL = 'http://ec2-54-163-133-56.compute-1.amazonaws.com'; // ec2 server endpoint
 
 const FavoriteList = () => {
     const [favoriteArray, setFavoriteArray] = useState([]);
