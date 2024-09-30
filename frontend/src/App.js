@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import PokemonList from './components/PokemonList';
 import PokemonDetailWrapper from './components/PokemonDetailWrapper';
 import FavoriteList from './components/FavoriteList';
+const gitHubUrl = 'https://github.com/uriel-martinez1/django-react-pokemon-app';
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
           <span>
             &nbsp;|&nbsp;
             <Link to='/favorite'>View Favorite Pokemon</Link>
+          </span>
+          <span>
+            &nbsp;|&nbsp;
+            <Link to={gitHubUrl} target='_blank' rel='noopener noreferrer'>GitHub</Link>
           </span>
         </div>
         <Routes>
