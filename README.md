@@ -1,1 +1,1 @@
-# django-react-pokemon-app
+# Favorite Poké App
